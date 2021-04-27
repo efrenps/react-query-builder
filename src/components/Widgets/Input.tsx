@@ -22,10 +22,10 @@ export const Input: React.FC<InputProps> = inputProps => {
 
   const { form } = components;
 
-  const handleBoolChange = (value: boolean) => {
+  const handleBoolChange = (changedValue: boolean) => {
     const clonedData = clone(data);
     const parentIndex = clonedData.findIndex((item: any) => item.id === id);
-    clonedData[parentIndex].value = value === true ? 'TODAY' : '';
+    clonedData[parentIndex].value = changedValue === true ? 'TODAY' : '';
     setData(clonedData);
     onChange(clonedData);
   };
