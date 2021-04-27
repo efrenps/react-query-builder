@@ -20,18 +20,16 @@ export const SelectMulti: React.FC<SelectMultiProps> = ({
   const { form } = components;
 
   const handleChange = (value: string) => {
-    if (setData && onChange) {
-      const clonedData = clone(data);
-      const parentIndex = clonedData.findIndex((item: any) => item.id === id);
+    const clonedData = clone(data);
+    const parentIndex = clonedData.findIndex((item: any) => item.id === id);
 
-      clonedData[parentIndex].value = clonedData[parentIndex].value.filter(
-        (item: any) => item !== value
-      );
-      clonedData[parentIndex].value.push(value);
+    clonedData[parentIndex].value = clonedData[parentIndex].value.filter(
+      (item: any) => item !== value
+    );
+    clonedData[parentIndex].value.push(value);
 
-      setData(clonedData);
-      onChange(clonedData);
-    }
+    setData(clonedData);
+    onChange(clonedData);
   };
 
   const handleDelete = (value: string) => {
