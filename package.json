@@ -1,5 +1,5 @@
 {
-  "name": "@vojtechportes/react-query-builder",
+  "name": "@efrenps/react-query-builder",
   "version": "0.4.4",
   "license": "MIT",
   "keywords": [
@@ -12,16 +12,16 @@
     "typescript",
     "configurable"
   ],
-  "description": "Simple, highly configurable query builder for react",
+  "description": "Simple, highly configurable query builder for react - Fork from https://www.github.com/vojtechportes",
   "author": {
-    "email": "vojtech.v.portes@gmail.com",
-    "name": "Vojtech Portes",
-    "url": "https://www.github.com/vojtechportes"
+    "email": "efren_ps@yahoo.es",
+    "name": "Efren Perez",
+    "url": "https://github.com/efrenps/react-query-builder"
   },
-  "homepage": "https://github.com/vojtechportes/react-query-builder",
+  "homepage": "https://github.com/efrenps/react-query-builder",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vojtechportes/react-query-builder.git"
+    "url": "https://github.com/efrenps/react-query-builder.git"
   },
   "main": "dist/index.js",
   "module": "dist/react-query-builder.esm.js",
