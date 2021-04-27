@@ -63,28 +63,38 @@ export const Input: React.FC<InputProps> = inputProps => {
         </>
       );
     } else {
-      const isToday = value === 'TODAY';
-      const dateValue = isToday ? '' : value;
-      const dateDisabled = isToday ? true : readOnly;
-      return (
-        <>
-          <form.Input
-            type={type}
-            value={dateValue}
-            onChange={handleChange}
-            disabled={dateDisabled}
-          />
-          <DivContainer>
-            <form.Switch
-              onChange={handleBoolChange}
-              switched={isToday}
-              disabled={readOnly}
+      if (type === 'date') {
+        const isToday = value === 'TODAY';
+        const dateValue = isToday ? '' : value;
+        const dateDisabled = isToday ? true : readOnly;
+        return (
+          <>
+            <form.Input
+              type={type}
+              value={dateValue}
+              onChange={handleChange}
+              disabled={dateDisabled}
             />
-          </DivContainer>
-          <DivContainer>
-            <label>Today</label>
-          </DivContainer>
-        </>
+            <DivContainer>
+              <form.Switch
+                onChange={handleBoolChange}
+                switched={isToday}
+                disabled={readOnly}
+              />
+            </DivContainer>
+            <DivContainer>
+              <label>Today</label>
+            </DivContainer>
+          </>
+        );
+      }
+      return (
+        <form.Input
+          type={type}
+          value={value}
+          onChange={handleChange}
+          disabled={readOnly}
+        />
       );
     }
   }
